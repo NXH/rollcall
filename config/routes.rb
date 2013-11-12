@@ -1,4 +1,6 @@
 Rollcall::Application.routes.draw do
+  root"meetings#index"
+
   # Routes for the Attendance resource:
   # CREATE
   get '/attendances/new', controller: 'attendances', action: 'new', as: 'new_attendance'
@@ -107,7 +109,7 @@ Rollcall::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
