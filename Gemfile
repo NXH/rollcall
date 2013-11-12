@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Starter resources
+gem 'starter_generators'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
