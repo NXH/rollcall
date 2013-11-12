@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Meeting #<%= @meeting.id %></h1>
+  <h1> <%= Course.find_by(id: @meeting.course_id).title %> </h1>
 </div>
 
 <dl class="dl-horizontal">
