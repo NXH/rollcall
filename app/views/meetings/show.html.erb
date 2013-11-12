@@ -9,4 +9,11 @@
   <dt>Course</dt>
   <dd><%= @meeting.course_id %></dd>
 
+  <p></p>
+    <% attendance = Attendance.where(:meeting_id => @meeting.course_id) %>
+    <% attendance.each do |attend| %>
+      <dt> Attended </dt>
+      <dd> <%= link_to(Student.find_by(:id => attend.student_id).first_name, student_url(attend.student_id) ) %> </dd>
+    <% end %>
+
 </dl>
