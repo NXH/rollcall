@@ -1,7 +1,7 @@
 class AttendancesController < ApplicationController
 
   def index
-    @attendances = Attendance.all
+    @attendances = Attendance.all.order(:meeting_id)
   end
 
   def show
